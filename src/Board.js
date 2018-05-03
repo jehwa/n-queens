@@ -80,13 +80,11 @@
     // test if a specific row on this board contains a conflict
     hasRowConflictAt: function(rowIndex) {
       var count = 0;
-      console.log(this.get(rowIndex));
       this.get(rowIndex).forEach(function(el) {
         if (el === 1) {
           count++;
         }
       });
-      console.log(count);
       if (count > 1) {
         return true;
       }
